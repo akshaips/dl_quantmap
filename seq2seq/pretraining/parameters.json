@@ -1,0 +1,37 @@
+{"input_file" : "/scratch-shared/akshai/Publication/initial_models/all_human_cid_smiles.txt",
+"trial" : false,
+"Number_of_workers" : "8",
+"sequence_length_cutoff" : {
+                            "lower_cutoff" : "0",
+                            "upper_cutoff" : "15000"
+                            },
+"augmentation" : {
+                  "number_of_augmentation" : "0",
+                  "iteration" : "1000000"
+                  },
+"tokens" : {
+            "_comment" : "tokenization can be either of SPE, atomwise and vocab_file",
+            "tokenization" : "atomwise",
+            "sos_eos_tokens" : true,
+            "spe_min_frequency" : "2000"
+            },
+"pretrained_model" : {
+                      "load_model" : false,
+                      "pretrained_model_path" : ""
+                     },
+"lstm_parameters" : {
+                     "en_embedding_size" : "400",
+                     "en_dropout" : "0.2",
+                     "hidden_size" : "1024",
+                     "num_layers" : "3"
+                    },
+"fc_layer_parameters" : {
+                        "fc_size" : "1024",
+                        "fc_dropout" : "0.2"
+                        },
+"network_parameters" : {
+                        "epochs" : "10",
+                        "batch_size" : "64",
+                        "learning_rate" : "0.0005"
+                        }
+}

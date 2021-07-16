@@ -1,0 +1,23 @@
+{
+"input_file" : "/scratch-shared/akshai/Publication/initial_models/ML_input_5338.txt",
+"trial" : false,
+"k_fold_value" : "10",
+"test_set_percentage" : "0.1",
+"fingerprint" : {
+                "_comment" : "morgan, topological, MACCS and atompairs",
+                "fingerprint_type" : "morgan",
+                "fingerprint_size" : "1024",
+                "radius" : "2"
+                },
+"label_cutoff" : {
+                "enable_label_cutoff" : true,
+                "lower_label_count_cutoff" : "100",
+                "upper_label_count_cutoff" : "500"
+                },
+"network_parameters" : {
+                        "epochs" : "10",
+                        "learning_rate" : "1e-5",
+                        "batch_size" : "32",
+                        "enable_class_weight" : true
+                        }
+}

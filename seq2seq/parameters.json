@@ -1,0 +1,50 @@
+{"input_file" : "/scratch-shared/akshai/Publication/initial_models/ML_input_5338.txt",
+"trial" : false,
+"k_fold_value" : "10",
+"test_set_percentage" : "0.1",
+"Number_of_workers" : "8",
+"label_cutoff" : {
+                  "enable_label_cutoff" : true,
+                  "lower_label_count_cutoff" : "100",
+                  "upper_label_count_cutoff" : "500"
+                  },
+"sequence_length_cutoff" : {
+                            "lower_cutoff" : "2",
+                            "upper_cutoff" : "150"
+                            },
+"augmentation" : {
+                  "label_wise_augmentation" : true,
+                  "number_of_augmentation" : "0",
+                  "iteration" : "1000000"
+                  },
+"tokens" : {
+            "_comment" : "tokenization can be either of SPE, atomwise and vocab_file",
+            "tokenization" : "atomwise",
+            "sos_eos_tokens" : true,
+            "spe_min_frequency" : "2000"
+            },
+"vocab_file" : {
+                "use_vocab_file" : true,
+                "vocab_file_path" : "vocab.txt"
+                },
+"pretrained_model" : {
+                      "load_model" : true,
+                      "pretrained_model_path" : "model_6.pth"
+                     },
+"lstm_parameters" : {
+                     "en_embedding_size" : "400",
+                     "en_dropout" : "0",
+                     "hidden_size" : "1024",
+                     "num_layers" : "1"
+                    },
+"fc_layer_parameters" : {
+                        "fc_size" : "1024",
+                        "fc_dropout" : "0.4"
+                        },
+"network_parameters" : {
+                        "epochs" : "50",
+                        "batch_size" : "64",
+                        "learning_rate" : "1e-3",
+                        "enable_class_weight" : false
+                        }
+}
